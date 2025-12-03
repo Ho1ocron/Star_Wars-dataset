@@ -44,3 +44,9 @@ class Starship(Model):
     hyperdrive_rating = CharField(max_length=100)
     MGLT = CharField(max_length=100)
     starship_class = CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return f"Model id: {self.id}, model name: {self.name}."
+
+    class Meta:
+        table = "starships"
