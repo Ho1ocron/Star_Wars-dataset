@@ -48,7 +48,7 @@ def get_character_from_swapi(character_id: int) -> Character:
         height=data['height'],
         mass=data['mass'],
         skin_color=data['skin_color'],
-        homeworld=data["homeworld"],
+        homeworld=get_homeworld_name(data['homeworld']),
         species=",".join(data.get("species", [])) or "unknown",
     )
 
@@ -66,3 +66,11 @@ def get_character_from_swapi(character_id: int) -> Character:
     character.save()
     return character
 
+
+def get_homeworld_name(homeworld_url: str) -> str:
+    with Client() as client:
+        response = client.get(homeworld_url)
+        response.raise_for_status()
+        data: dict = response.json()
+
+    return data.get("name", "unknown")

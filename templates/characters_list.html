@@ -21,7 +21,7 @@
             <div class="Container">
                 {% for character in characters %}
                     <div class="Main">
-                        <a class="Text" href="{% url 'character' character.id %}">
+                        <a class="Text" href="{% url 'get_character' character.id %}">
                             {{ character.name }}
                         </a>
                     </div>

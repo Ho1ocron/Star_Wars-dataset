@@ -12,6 +12,7 @@ class Character(Model):
     id = IntegerField(primary_key=True)
     name = CharField(max_length=100)
     mass = IntegerField()
+    height = IntegerField(default=0)
     hair_color = CharField(max_length=100)
     skin_color = CharField(max_length=100)
     eye_color = CharField(max_length=100)

@@ -32,7 +32,7 @@
                 {% if character.starships.all %}
                     {% for ship in character.starships.all %}
                         <div class="Main">
-                            <a class="Text" href="{% url 'starship' ship.id %}">
+                            <a class="Text" href="{% url 'get_starship' ship.id %}">
                                 {{ ship.name }} ({{ ship.model }})
                             </a>
                         </div>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="Buttons">
-                <a class="btns" href="{% url 'characters' %}">Back to Characters</a>
+                <a class="btns" href="{% url 'get_characters' %}">Back to Characters</a>
             </div>
 
         </main>

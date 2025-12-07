@@ -19,7 +19,11 @@ from django.urls import path, include
 
 from database import urls as database_urls
 
+from .views import render_index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(database_urls)),
+    path('', render_index, name='index'),
+    path('', include("database.urls")),
+    
 ]
