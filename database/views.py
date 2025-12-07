@@ -21,7 +21,7 @@ def get_character(request: HttpRequest, character_id: int) -> HttpResponse:
 
 def get_starships(request: HttpRequest) -> HttpResponse:
     starships = Starship.objects.all()
-    return render(request, 'starship_list.html', {'starships': starships})
+    return render(request, 'starships_list.html', {'starships': starships})
 
 
 def get_starship(request: HttpRequest, starship_id: int) -> HttpResponse:
