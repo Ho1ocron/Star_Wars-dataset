@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Imperial Database — Home</title>
+
+        <link rel="stylesheet" href="/static/style/style.css">
+    </head>
+
+    <body>
+        <main>
+
+            <header>
+                <h1 id="header1">Imperial Galactic Database</h1>
+            </header>
+
+            <div class="Main">
+                <p class="Text">
+                    Welcome to the official Imperial Database.  
+                    Here you can view classified information on characters, starships, and Galactic Empire assets.
+                </p>
+            </div>
+
+            <div class="Main">
+                <h2 class="Text">Sections</h2>
+            </div>
+
+            <div class="Buttons">
+                <a class="btns" href="{% url 'characters' %}">View All Characters</a>
+                <a class="btns" href="{% url 'starships' %}">View All Starships</a>
+            </div>
+
+            <div class="Container">
+                <p class="Text">
+                    Database contains full records imported from Imperial Archives and SWAPI terminals.
+                </p>
+            </div>
+
+        </main>
+    </body>
+</html>

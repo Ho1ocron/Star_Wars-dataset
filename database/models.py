@@ -19,14 +19,13 @@ class Character(Model):
     gender = CharField(max_length=100)
     homeworld = CharField(max_length=100)
     species = CharField(max_length=100)
-    starships = ManyToManyField("models.Starship", related_name="characters_starships")
-    image = ImageField(upload_to="characters_images", null=True, blank=True)
+    starships = ManyToManyField("Starship", related_name="characters_starships")
 
     def __str__(self) -> str:
         return f"Model id: {self.id}, model name: {self.name}."
 
     class Meta:
-        table = "characters"
+        db_table = "characters"
 
 
 class Starship(Model):
@@ -44,10 +43,9 @@ class Starship(Model):
     hyperdrive_rating = CharField(max_length=100)
     MGLT = CharField(max_length=100)
     starship_class = CharField(max_length=100)
-    image = ImageField(upload_to="characters_images", null=True, blank=True)
 
     def __str__(self) -> str:
         return f"Model id: {self.id}, model name: {self.name}."
 
     class Meta:
-        table = "starships"
+        db_table = "starships"

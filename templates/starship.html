@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>{{ starship.name }} — Starship</title>
+
+        <link rel="stylesheet" href="/static/style/style.css">
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1 id="header1">{{ starship.name }}</h1>
+            </header>
+
+            <div class="Main">
+                <p class="Text"><strong>Model:</strong> {{ starship.model }}</p>
+                <p class="Text"><strong>Manufacturer:</strong> {{ starship.manufacturere }}</p>
+                <p class="Text"><strong>Cost:</strong> {{ starship.cost_in_credits }}</p>
+                <p class="Text"><strong>Length:</strong> {{ starship.length }}</p>
+                <p class="Text"><strong>Speed:</strong> {{ starship.max_atmosphering_speed }}</p>
+                <p class="Text"><strong>Crew:</strong> {{ starship.crew }}</p>
+                <p class="Text"><strong>Passengers:</strong> {{ starship.passengers }}</p>
+                <p class="Text"><strong>Cargo Capacity:</strong> {{ starship.cargo_capacity }}</p>
+                <p class="Text"><strong>Consumables:</strong> {{ starship.consumables }}</p>
+                <p class="Text"><strong>Hyperdrive Rating:</strong> {{ starship.hyperdrive_rating }}</p>
+                <p class="Text"><strong>MGLT:</strong> {{ starship.MGLT }}</p>
+                <p class="Text"><strong>Starship Class:</strong> {{ starship.starship_class }}</p>
+            </div>
+
+            <div class="Buttons">
+                <a class="btns" href="{% url 'starships' %}">Back to Starships</a>
+                <a class="btns" href="{% url 'characters' %}">Back to Characters</a>
+            </div>
+
+        </main>
+    </body>
+</html>

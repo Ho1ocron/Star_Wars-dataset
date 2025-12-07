@@ -17,9 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from imp_database import urls as imp_database_urls
+from database import urls as database_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(imp_database_urls)),
+    path('', include(database_urls)),
 ]

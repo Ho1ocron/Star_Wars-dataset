@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>{{ character.name }} — Character</title>
+
+        <link rel="stylesheet" href="/static/style/style.css">
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1 id="header1">{{ character.name }}</h1>
+            </header>
+
+            <div class="Main">
+                <p class="Text"><strong>Gender:</strong> {{ character.gender }}</p>
+                <p class="Text"><strong>Birth Year:</strong> {{ character.birth_year }}</p>
+                <p class="Text"><strong>Homeworld:</strong> {{ character.homeworld }}</p>
+                <p class="Text"><strong>Species:</strong> {{ character.species }}</p>
+                <p class="Text"><strong>Hair Color:</strong> {{ character.hair_color }}</p>
+                <p class="Text"><strong>Eye Color:</strong> {{ character.eye_color }}</p>
+                <p class="Text"><strong>Mass:</strong> {{ character.mass }}</p>
+            </div>
+
+            <div class="Main">
+                <h2 class="Text">Starships</h2>
+            </div>
+
+            <div class="Container">
+                {% if character.starships.all %}
+                    {% for ship in character.starships.all %}
+                        <div class="Main">
+                            <a class="Text" href="{% url 'starship' ship.id %}">
+                                {{ ship.name }} ({{ ship.model }})
+                            </a>
+                        </div>
+                    {% empty %}
+                        <p class="Text">This character has no starships.</p>
+                    {% endfor %}
+                {% else %}
+                    <p class="Text">No starships available.</p>
+                {% endif %}
+            </div>
+
+            <div class="Buttons">
+                <a class="btns" href="{% url 'characters' %}">Back to Characters</a>
+            </div>
+
+        </main>
+    </body>
+</html>

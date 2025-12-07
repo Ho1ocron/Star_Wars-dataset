@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Starships — Imperial Database</title>
+        <title>Characters — Imperial Database</title>
 
         <link rel="stylesheet" href="/static/style/style.css">
     </head>
@@ -11,27 +11,23 @@
     <body>
         <main>
             <header>
-                <h1 id="header1">Imperial Database — Starships</h1>
+                <h1 id="header1">Imperial Database — Characters</h1>
             </header>
 
             <div class="Main">
-                <h2 class="Text">All Starships</h2>
+                <h2 class="Text">All Characters</h2>
             </div>
 
             <div class="Container">
-                {% for starship in starships %}
+                {% for character in characters %}
                     <div class="Main">
-                        <a class="Text" href="{% url 'starship' starship.id %}">
-                            {{ starship.name }} ({{ starship.model }})
+                        <a class="Text" href="{% url 'character' character.id %}">
+                            {{ character.name }}
                         </a>
                     </div>
                 {% empty %}
-                    <p class="Text">No starships found.</p>
+                    <p class="Text">No characters found.</p>
                 {% endfor %}
-            </div>
-
-            <div class="Buttons">
-                <a class="btns" href="{% url 'characters' %}">Back to Characters</a>
             </div>
 
         </main>
