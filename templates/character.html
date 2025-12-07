@@ -27,12 +27,10 @@
 
             <div class="Main">
                 <h2 class="Text">Starships</h2>
-            </div>
-
-            <div class="Container">
+    
                 {% if character.starships.all %}
                     {% for ship in character.starships.all %}
-                        <div class="Main">
+                        <div class="Container">
                             <a class="Text" href="{% url 'get_starship' ship.id %}">
                                 {{ ship.name }} ({{ ship.model }})
                             </a>
@@ -44,9 +42,11 @@
                     <p class="Text">No starships available.</p>
                 {% endif %}
             </div>
-
-            <div class="Buttons">
-                <a class="btns" href="{% url 'get_characters' %}">Back to Characters</a>
+            <div class="Main">
+                <div class="Buttons">
+                    <a class="btns" href="{% url 'get_characters' %}">Back to Characters</a>
+                    <a class="btns" href="{% url 'index' %}">Back to Homepage</a>
+                </div>
             </div>
 
         </main>

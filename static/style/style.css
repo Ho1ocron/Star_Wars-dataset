@@ -23,6 +23,13 @@ header {
     text-shadow: 0 0 8px #FF652F;
 }
 
+#header2 .Text {
+    font-family: "first";
+    font-size: 18pt;
+    color: rgba(235, 58, 93, 0.5); /* muted gray */
+    margin-top: -10px;
+}
+
 /* --------------------------- */
 /* Main containers */
 .Main {
@@ -30,6 +37,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    flex-direction: column;
 }
 
 .Container {
@@ -37,7 +45,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 2px 0;
 }
 
 /* --------------------------- */
@@ -45,7 +53,8 @@ header {
 .Text {
     font-family: "first";
     font-size: 16pt;
-    color: #747474; /* muted gray */
+   /* color: #747474; /* muted gray */
+    color: hsl(0, 0%, 50%);
     text-align: center;
     margin: 5px;
 }
@@ -68,11 +77,12 @@ header {
 
 /* --------------------------- */
 /* Buttons */
+/* Make buttons stack vertically */
 .Buttons {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 15px;
+    flex-direction: column; /* stack buttons */
+    align-items: center;    /* center them horizontally */
+    gap: 10px;              /* spacing between buttons */
 }
 
 .btns {
@@ -178,4 +188,24 @@ th {
     #header1 {
         font-size: 28pt;
     }
+}
+
+
+/* --------------------------- */
+/* Box container for text and buttons */
+.Main {
+    background-color: #1f1f23; /* dark card background */
+    border: 2px solid rgba(235, 58, 93, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(166, 126, 72, 0.3); /* subtle neon glow */
+}
+
+/* Optional: spacing inside box */
+.Main .Text {
+    margin-bottom: 15px;
 }

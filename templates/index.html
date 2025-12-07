@@ -15,7 +15,7 @@
             <header>
                 <h1 id="header1">Imperial Galactic Database</h1>
             </header>
-
+            
             <div class="Main">
                 <p class="Text">
                     Welcome to the official Imperial Database.  
@@ -24,18 +24,13 @@
             </div>
 
             <div class="Main">
-                <h2 class="Text">Sections</h2>
-            </div>
-
-            <div class="Buttons">
-                <a class="btns" href="{% url 'get_characters' %}">View All Characters</a>
-                <a class="btns" href="{% url 'get_starships' %}">View All Starships</a>
-            </div>
-
-            <div class="Container">
                 <p class="Text">
                     Database contains full records imported from Imperial Archives and SWAPI terminals.
                 </p>
+                <div class="Buttons">
+                    <a class="btns" href="{% url 'get_characters' %}">View All Characters</a>
+                    <a class="btns" href="{% url 'get_starships' %}">View All Starships</a>
+                </div>
             </div>
 
         </main>

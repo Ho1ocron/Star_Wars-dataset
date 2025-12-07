@@ -18,9 +18,9 @@
                 <h2 class="Text">All Starships</h2>
             </div>
 
-            <div class="Container">
+            <div class="Main">
                 {% for starship in starships %}
-                    <div class="Main">
+                    <div class="Container">
                         <a class="Text" href="{% url 'get_starship' starship.id %}">
                             {{ starship.name }} ({{ starship.model }})
                         </a>
@@ -29,9 +29,11 @@
                     <p class="Text">No starships found.</p>
                 {% endfor %}
             </div>
-
-            <div class="Buttons">
-                <a class="btns" href="{% url 'get_characters' %}">Back to Characters</a>
+            <div class="Main">
+                <div class="Buttons">
+                    <a class="btns" href="{% url 'get_characters' %}">Back to Characters</a>
+                    <a class="btns" href="{% url 'index' %}">Back to Homepage</a>
+                </div>
             </div>
 
         </main>

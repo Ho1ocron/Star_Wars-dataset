@@ -14,7 +14,7 @@
                 <h1 id="header1">Imperial Database — Characters</h1>
             </header>
 
-            <div class="Main">
+            <div class="Container">
                 <h2 class="Text">All Characters</h2>
             </div>
 
@@ -28,6 +28,9 @@
                 {% empty %}
                     <p class="Text">No characters found.</p>
                 {% endfor %}
+            </div>
+            <div class="Buttons">
+                <a class="btns" href="{% url 'index' %}">Back to Homepage</a>
             </div>
 
         </main>
