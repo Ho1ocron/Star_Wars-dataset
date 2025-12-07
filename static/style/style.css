@@ -1,0 +1,181 @@
+/* --------------------------- */
+/* --------------------------- */
+/* Body */
+body {
+    background-color: #141418; /* deep space black */
+    margin: 0;
+    padding: 0;
+    font-family: "first", sans-serif;
+}
+
+/* --------------------------- */
+/* Header */
+header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#header1 {
+    font-family: "first";
+    font-size: 36pt;
+    color: #FF652F; /* imperial orange */
+    text-shadow: 0 0 8px #FF652F;
+}
+
+/* --------------------------- */
+/* Main containers */
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* --------------------------- */
+/* Text */
+.Text {
+    font-family: "first";
+    font-size: 16pt;
+    color: #747474; /* muted gray */
+    text-align: center;
+    margin: 5px;
+}
+
+/* --------------------------- */
+/* Inputs */
+.Input {
+    font-family: "first";
+    font-size: 14pt;
+    color: #14A76C; /* neon green accent */
+    background-color: #272727;
+    border: 2px solid #272727;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    padding: 0 5px;
+    margin-left: 10px;
+}
+
+/* --------------------------- */
+/* Buttons */
+.Buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.btns {
+    font-family: "first";
+    background-color: #272727;
+    color: #EB3A5D; /* red accent */
+    border: 2px solid #272727;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btns:hover {
+    background-color: #EB3A5D;
+    color: #272727;
+    box-shadow: 0 0 10px #EB3A5D;
+}
+
+.btns:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #1a1a1a;
+}
+
+/* --------------------------- */
+/* Canvas */
+canvas {
+    border: 2px solid #14A76C; /* neon green accent */
+    display: block;
+    margin: 20px auto;
+    background-color: #1a1a1a;
+}
+
+/* --------------------------- */
+/* Cards for characters / starships */
+.card {
+    background-color: #1f1f23;
+    border: 1px solid #272727;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    color: #ccc;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(235, 58, 93, 0.5);
+}
+
+/* --------------------------- */
+/* Card titles */
+.card-title {
+    font-size: 18pt;
+    color: #FF652F;
+    margin-bottom: 10px;
+}
+
+/* --------------------------- */
+/* Card text */
+.card-text {
+    font-size: 14pt;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+/* --------------------------- */
+/* Tables (optional) */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #272727;
+    padding: 10px;
+    color: #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #1f1f23;
+    color: #FF652F;
+}
+
+/* --------------------------- */
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+
+    .Input {
+        width: 80px;
+        height: 25px;
+    }
+
+    #header1 {
+        font-size: 28pt;
+    }
+}

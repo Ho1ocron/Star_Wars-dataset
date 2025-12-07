@@ -5,7 +5,8 @@
         
         <title>{{ character.name }} — Character</title>
 
-        <link rel="stylesheet" href="/static/style/style.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style/style.css' %}">
     </head>
 
     <body>
