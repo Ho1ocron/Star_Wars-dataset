@@ -2,6 +2,8 @@ from django.contrib import admin
 
 # Register your models here.
 # s@sts.s.ru
+# login: admin
+# password: 1234
 
 from .models import Character, Starship
 
